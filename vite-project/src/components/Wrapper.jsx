@@ -2,7 +2,6 @@ export default function Wrapper ({children}) {
     return(
 <div class="wrapper">
 	{children}	
-
 			<div class="pop-new-card" id="popNewCard">
 				<div class="pop-new-card__container">
 					<div class="pop-new-card__block">
