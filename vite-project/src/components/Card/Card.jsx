@@ -1,19 +1,10 @@
-const tasks = {
-      title:"Название задачи",
-      date:"30.10.2023",
-      theme:"green",
-      description:"Research",
-    };
-  
-
-
-const Card = () => {
+const Card = ({ title, date, theme, description }) => {
     return (
       <div className="cards__item">
         <div className="cards__card card">
           <div className="card__group">
-            <div className={`card__theme _${tasks.theme}`}>
-              <p className={`_${tasks.theme}`}>{tasks.description}</p>
+            <div className={`card__theme _${theme}`}>
+              <p className={`_${theme}`}>{description}</p>
             </div>
             <a href="#popBrowse" target="_self">
               <div className="card__btn">
@@ -25,7 +16,7 @@ const Card = () => {
           </div>
           <div className="card__content">
             <a href="" target="_blank">
-              <h3 className="card__title">{tasks.title}</h3>
+              <h3 className="card__title">{title}</h3>
             </a>
             <div className="card__date">
               <svg
@@ -56,7 +47,7 @@ const Card = () => {
                   </clipPath>
                 </defs>
               </svg>
-              <p>{tasks.date}</p>
+              <p>{date}</p>
             </div>
           </div>
         </div>
