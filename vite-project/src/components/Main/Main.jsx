@@ -1,22 +1,28 @@
 import Column from "../Column/Column";
-export default function Main() {
-  return (
-    <main className="main">
-      <div className="container">
-        <div className="main__block">
-          <div className="main__content">
-            {/* Тут начало  общего блока! */}
-
-            {/* Окончание блоково компонент */}
-            <Column title={`Без статуса`} />
-            <Column title={`Нужно сделать`} />
-            <Column title={`В работе`} />
-            <Column title={`Тестирование`} />
-            <Column title={`Готово`} />
-            {/* ................................................................. */}
-          </div>
-        </div>
-      </div>
-    </main>
+import { statusList } from "../../data.js";
+import { Container } from "../Header/Header.styled.js";
+import { MainBLock, MainContet, MainMain } from "./Main.styled.js";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+export default function Main({ cards }) {
+  return ReactDOM.render(
+    <BrowserRouter>
+      <MainMain>
+        <Container>
+          <MainBLock>
+            <MainContet>
+              {statusList.map((status) => (
+                <Column
+                  key={status}
+                  title={status}
+                  cardList={cards.filter((card) => card.status === status)}
+                />
+              ))}
+            </MainContet>
+          </MainBLock>
+        </Container>
+      </MainMain>
+    </BrowserRouter>,
+    document.getElementById("root")
   );
 }
