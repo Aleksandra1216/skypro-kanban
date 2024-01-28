@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
+    }, 2000); //задержка 2 сек
   }, []);
   return (
     <>
@@ -39,9 +39,7 @@ function App() {
         <PopBrowse />
         <Header addCard={addCard} />
         {isLoading ? (
-          <div className="loader">
-            <img src="https://cojo.ru/wp-content/uploads/2022/12/izobrazhenie-zagruzhaetsia-1.webp" />
-          </div>
+          <div className="loader">Подождите, идет загрузка...</div>
         ) : (
           <Main cards={cards} />
         )}

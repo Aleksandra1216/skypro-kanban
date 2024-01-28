@@ -38,7 +38,7 @@ export default function Header({ addCard }) {
               href="#user-set-target"
               className="header__user _hover02"
             >
-              YarOlshankiy
+              Ivan.Ivanov
             </a>
             {isOpen && (
               <div
@@ -46,7 +46,7 @@ export default function Header({ addCard }) {
                 id="user-set-target"
               >
                 <a href="">#</a>
-                <p className="pop-user-set__name">Yaroslav Olshanskiy</p>
+                <p className="pop-user-set__name">ivan.ivanov</p>
                 <p className="pop-user-set__mail">ivan.ivanov@gmail.com</p>
                 <div className="pop-user-set__theme">
                   <p>Темная тема</p>
