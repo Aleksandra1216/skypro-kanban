@@ -31,11 +31,3 @@ export const HeaderNav = styled.nav`
   align-items: center;
   justify-content: center;
 `;
-// export const
-// export const
-// export const
-// export const
-// export const
-// export const
-// export const
-// export const
